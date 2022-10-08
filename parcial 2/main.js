@@ -163,5 +163,7 @@ buscarmantenimientoid(2,  (err, mantenimiento)=>{
         mantenimiento.autos = autos;
         delete mantenimiento.autos;
         console.log(mantenimiento)
-    }
+    })
+}
+)
 
