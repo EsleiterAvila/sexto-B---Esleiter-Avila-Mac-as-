@@ -125,7 +125,7 @@ mantenimiento(0)
 
 function buscarmantenimientoid(id, callback)
 {
-    const mantenimiento=  mantenimiento.find((mantenimiento)=>  mantenimiento.id === id ); // true === "true"
+    const mantenimiento =  mantenimiento.find((mantenimiento)=>  mantenimiento.id === id ); // true === "true"
     if (!mantenimiento)
     {
         const error =  new Error();
@@ -137,7 +137,7 @@ function buscarmantenimientoid(id, callback)
 }
 function buscarautoautos(autos, callback)
 {
-    const autos = autos.find((autos)=> autos.autos=== id );
+    const autos = autos.find((autos)=> autos.autos=== autos );
     if (!autos)
     {
         const error= new Error();
@@ -147,14 +147,14 @@ function buscarautoautos(autos, callback)
     return callback(null, autos);
 }
 
-buscarmantenimientoid(2,  (err, mantenimiento)=>{
+buscarmantenimientoid(2,  (err, idmantenimiento)=>{
     if (err)
     {
         console.log(err.message);
         return;
     }
     
-    buscarautoautos(mantenimiento.autos, (err, mantenimiento)=>{
+    buscarautoautos(idmantenimiento.autos, (err, mantenimiento)=>{
         if (err)
         {
             console.log(err.message);
@@ -166,4 +166,6 @@ buscarmantenimientoid(2,  (err, mantenimiento)=>{
     })
 }
 )
+
+
 
