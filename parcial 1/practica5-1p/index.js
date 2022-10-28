@@ -17,6 +17,7 @@ app.get('/', (req,res)=>{
         autos
     )
 })
+
 app.get('/:id', (req,res)=>{
     const {id} =  req.params;
     let result = autos.filter(p => p.id === id);
@@ -28,6 +29,7 @@ app.get('/:id', (req,res)=>{
         "message":"id no encontrado"
     });
 })
+
 app.post('/', (req,res)=>{
     const {body} = req;
     autos.push(body);
@@ -36,6 +38,8 @@ app.post('/', (req,res)=>{
         response: body
     })
 })
+
+//apartado donde se ingresan los atribustos de la entidad
 app.put('/', (req,res)=>{
     const {id, descripcion, placa, color} = req.body;
     
