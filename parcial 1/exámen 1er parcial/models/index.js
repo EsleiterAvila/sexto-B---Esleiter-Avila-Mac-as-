@@ -1,4 +1,4 @@
-const Mantenimiento =  require('./Mantenimiento');
+const Mantenimiento =  require('./Mantenimientos');
 
 module.exports ={
     Mantenimiento,
